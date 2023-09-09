@@ -1,0 +1,35 @@
+/* h1 {
+    color: green;
+}
+* {
+    color: red;
+} */
+/* p.colorRed {
+    color: red;
+}
+.colorBlue {
+    color: blue;
+    background-color: antiquewhite;
+}
+.bgYellow {
+    background-color: yellow;
+}
+div#colorPurple {
+    color: purple;
+} */
+
+/* div[class="colorRed"] {
+    color: red;
+} */
+
+/* p {
+    color: red;
+}
+
+div > li p {
+    color: blue;
+} */
+
+div + p {
+    color: rgb(255, 0, 247);
+}

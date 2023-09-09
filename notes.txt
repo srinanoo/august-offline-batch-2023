@@ -1,0 +1,155 @@
+NOTES:
+
+Languages?
+    - Markup
+        - placeholder
+
+        - HTML
+        - XML
+    - Scripting
+        - some of logical code
+        - types
+            - client side
+                - JavaScript
+                - ReactJs
+                - AngularJS
+                - VueJS
+                - NextJs
+            - server side
+                - ASP (.asp)
+                - JSP (.jsp)
+                - NodeJs (.js)
+                - PHP (.php)
+    - Programming
+        PHP
+        Python
+        Java
+        .Net
+        Ruby
+
+Syntax:
+    Pattern
+
+HTML TAGS (aka Elements aka Container)
+    Syntax:
+        <TAGNAME> -> Opening tag
+            .... content / container / data ... etc., 
+        </TAGNAME> -> Closing tag
+
+    Types:
+        Paired
+            <TAGNAME> -> Opening tag
+                .... content / container / data ... etc., 
+            </TAGNAME> -> Closing tag
+        Unpaired (aka Self Closing Tag)
+            <TAGNAME> -> Opening tag
+            or
+            <TAGNAME /> => xml way...
+
+HTML2, 3.01, 4.01, xHTML
+
+Pre-requisites:
+    Browser
+    Editor or IDE (Integrated Development Environment)
+        - Visual Studio Code
+
+Basic Coding Standards:
+    - Folder Structure
+        - Create a New Project Folder
+            ProjectFolder
+                *.html (all programming files will be in the project root folder)
+                css/
+                    *.css
+                js/
+                    *.js
+                images/
+                    *.*
+        - Meaningful Names
+            - Naming Conventions
+                6 Conventions
+                    lower camel case
+                        dilli
+                        dilliBabu
+                    upper camel case
+                        Dilli
+                        DilliBabu
+                    lowercase
+                        dillibabu
+                    uppercase
+                        DILLIBABU
+                    snake case
+                        dilli_babu
+                    dash case
+                        dilli-babu
+        - Code Indentation
+
+SEO
+    Search Engine Optimization
+
+
+NOTES: 17-08-2023
+
+Deprecated:
+    - Marked for deletion
+
+HTML Attributes (aka Properties)
+    Types:
+        - Paired
+            name="value"
+        - Unpaired (or Self Closing)
+            name
+
+    Classification:
+        - Core
+            id
+            class
+            style
+            title
+        - Generic
+            it depends on the tags...
+        - Custom
+            data-....
+
+IMG
+    src
+        - path
+            = current folder path where the file is... filename
+                - relative path
+            - physical / full path
+            - absolute path
+
+
+NOTES: 23-08-2023
+
+Encoding can be decoded
+    - system
+
+Encryption should never be decrypted
+    - half system + half human logic
+
+Forms:
+    36 Forms:
+    - Registration
+    - Application
+    - Education - Application, Fees, Feedback, Attendance, Conduct, Fine, No Due
+    - Login
+    - Govt - Aadhaar, Pan, Voter Id, Smard Card, License, Marriage, Fine, Divorce, NOC
+    - Estimation
+    - Scholarship
+    - Bank - Application, Deposit, ATM, Withdrawal, Loan, Missing,
+    - Insurance - Application, 
+    - Resume, CV, Bio-data
+    - Donation
+    - Police - Complaint, 
+    - Train - Reservation, Cancellation
+    - Subscription
+    - Sign up
+    - Agreement
+
+
+Projects and/or assignments:
+    2 Links
+        - 1st Link - Code Link
+            https://github.com/srinanoo/august-offline-batch-2023.git
+        - 2nd Link - Output Link
+            https://srinanoo.github.io/august-offline-batch-2023/
