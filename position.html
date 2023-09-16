@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        img {
+            max-width: 100%;
+        }
+        body {
+            margin: 0;
+        }
+        /* .div1 {
+            background-color: red;
+        }
+        .div2 {
+            background-color: green;
+        }
+        .div3 {
+            background-color: blue;
+        }
+        .div4 {
+            background-color: aqua;
+        }
+        .box {
+            width: 125px;
+            height: 125px;
+            border: solid;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            display: inline-block;
+            background-color: pink;
+            padding: 5px 10px;
+        }
+        .dropdown {
+            position: absolute;
+            background-color: aqua;
+            margin-left: -10px;
+            margin-top: 5px;
+            padding: 5px 10px;
+            display: none;
+        }
+        li:hover .dropdown {
+            display: block;
+        }
+
+        .box img, .box p {
+            position: absolute;
+            width: 125px;
+        }
+        
+        .box:hover p {
+            z-index: 1;
+        } */
+
+        .leftContainer {
+            background-color: purple;
+            width: 25%;
+            position: fixed;
+            height: 100vh;
+        }
+        .rightContainer {
+            background-color: pink;
+            width: 75%;
+            margin-left: 25%;
+        }
+
+        .sticky {
+            background-color: white;
+            position: sticky;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <div class="div1">Div 1 Container</div>
+    <div class="div2">Div 2 Container</div>
+    <div class="div3">Div 3 Container</div>
+    <div class="div4">Div 4 Container</div> -->
+
+    <!-- <div class="box">
+        <img src="images/close-1.png">
+        <p>Paragraph content goes here in this box...</p>
+    </div> -->
+
+    <!-- <nav>
+        <ul>
+            <li>Menu 1</li>
+            <li>Menu 2</li>
+            <li>Menu 3
+                <div class="dropdown">
+                    <div>Sub Menu 1</div>
+                    <div>Sub Menu 2</div>
+                    <div>Sub Menu 3</div>
+                    <div>Sub Menu 4</div>
+                    <div>Sub Menu 5</div>
+                    <div>Sub Menu 6</div>
+                </div>
+            </li>
+            <li>Menu 4</li>
+            <li>Menu 5</li>
+        </ul>
+    </nav> -->
+
+    <!-- <div class="box">
+        <p>Paragraph content goes here in this box...</p>
+        <img src="images/background.jpeg">
+    </div> -->
+
+    <img src="images/arrow2.png" width="30" style="position: fixed; right: 10px; bottom: 10px;">
+
+    <div class="container">
+        <div class="leftContainer">Left CONTAINER</div>
+        <div class="rightContainer">
+            <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Neque atque nostrum suscipit labore dicta error facere aliquam, iste, reprehenderit ex deleniti? Sunt facilis blanditiis distinctio molestias architecto numquam deleniti eius?</div>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p class="sticky">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur, dolore eius. Nisi quia aperiam quam. Autem facilis et nihil eaque voluptatem est tempora inventore magnam quidem vero, explicabo consectetur sapiente!</p>
+        </div>
+    </div>
+    
+</body>
+</html>
