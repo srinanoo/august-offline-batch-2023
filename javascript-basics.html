@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>JavaScript</h1>
+
+    <!-- External JavaScript -->
+    <script src="js/scripts.js"></script>
+
+    <!-- Internal JavaScript -->
+    <script>
+        // Single line comment
+        // Multiline 
+        // Comment
+        // document.write("1st Line");console.log("2nd line");
+
+        // variables
+        // var a = 10; // declaration + definition (define / assignment)
+
+        // // var a; // declaration
+        // a = 10; // assignment
+        // console.log(a);
+
+        // let b; // declaration
+        // b = 20; // assignment
+        // console.log(b);
+
+        // const c = 30; // declaration + definition
+        // console.log(c);
+
+        // var a = 10;
+        // console.log(a);
+        // console.log(typeof a);
+
+        // a = "This is a string";
+        // console.log(a);
+        // console.log(typeof a);
+
+        // var a = true;
+        // console.log(a);
+        // console.log(typeof a);
+
+        // let a = 10;
+        // console.log(a);
+        // console.log(typeof a);
+
+        // a = "This is a string";
+        // console.log(a);
+        // console.log(typeof a);
+
+        // let a = true;
+        // console.log(a);
+        // console.log(typeof a);
+
+        // var a = 10; // global
+        // console.log(a, " - 1st line");
+        // function testFunc() {
+        //     console.log(a, " - 2nd line");
+            
+        //     var b = 20; // local
+        //     console.log(b, " - b's 1st line");
+
+        //     c = 30; // global
+        //     console.log(c, " - c's 1st line");
+        // }
+        // testFunc();
+        // console.log(a, " - 3rd line");
+        // // console.log(b, " - b's 2nd line");
+        // var c;
+        // console.log(c, " - c's 2nd line");
+
+        // let a;
+        // let b = 20;
+
+        // console.time();
+        // if(a > b) {
+        //     console.log("A is greater than B");
+        // } else {
+        //     console.log("A is not greater than B");
+        // }
+        // console.timeEnd();
+
+        // console.time();
+        // (a > b)
+        //     ? console.log("A is greater than B")
+        //     : console.log("A is not greater than B");
+        // console.timeEnd();
+
+        // (a > b)
+        //     ? (b > a) 
+        //         ? console.log("A is greater than B")
+        //         : console.log("A is not");
+        //     : (a < b)
+        //         ?
+        //         :
+        //     ;
+
+        // let arr = [1, 2, 3, 4, 5, 6]; // static
+        // console.log(arr);
+        // console.log(arr[0]);
+        // console.log(arr[1]);
+        // console.log(arr[2]);
+        // console.log(arr[3]);
+        // arr[6] = "A";
+        // arr[0] = "Dinesh";
+        // console.log(arr);
+
+        // let arr1 = []; // dynamic
+        // arr1[0] = 1;
+        // arr1[1] = 2;
+        // arr1[2] = 3;
+        // arr1[3] = 4;
+        // arr1[6] = 6;
+        // console.log(arr1);
+
+        // let studentArr = [1000, "Dinesh", true];
+        // console.log(studentArr);
+
+        // // JS Object variable => JSON
+        // let studentObj = {
+        //     "id": 1000,
+        //     "name": "Dinesh",
+        //     "active": true,
+        // }
+        // console.log(studentObj);
+        // studentObj.phone = 1234567890;
+        // studentObj.name = "Bhaskar";
+        // console.log(studentObj);
+
+        // let studentObj1 = {};
+        // studentObj1.id = 2000;
+        // studentObj1.name = "Mohan";
+        // console.log(studentObj1);
+
+        // let studentArr = ["Dinesh", 1000, true];
+        // console.log(studentArr[1]);
+
+        // // JS Object variable => JSON
+        // let studentObj = {
+        //     "name": "Dinesh",
+        //     "id": 1000,
+        //     "active": true,
+        // }
+        // console.log(studentObj.name);
+
+        // let userData = [
+        //     {
+        //         "id": 1,
+        //         "name": "Mohan",
+        //         "active": true
+        //     }, 
+        //     {
+        //         "id": 2,
+        //         "name": "Dilli",
+        //         "active": false
+        //     },
+        //     {
+        //         "id": 3,
+        //         "name": "Bhaskar",
+        //         "active": true
+        //     }, 
+        //     {
+        //         "id": 4,
+        //         "name": "Anand",
+        //         "active": false
+        //     }, 
+        //     {
+        //         "id": 5,
+        //         "name": "Sriram",
+        //         "active": true
+        //     }, 
+        //     {
+        //         "id": 6,
+        //         "name": "Ajin",
+        //         "active": false
+        //     }, 
+        //     {
+        //         "id": 7,
+        //         "name": "Arun",
+        //         "active": true
+        //     }
+        // ];
+        // console.log(userData);
+        // // for(let i = 0; i < userData.length; i++) {
+        // //     if(userData[i].name == "Anand")
+        // //         console.log(i);
+        // //     console.log(userData[i].name);
+        // // }
+
+        // let dt = new Date(); // instantiation / instance
+        // console.log(dt);
+
+        // let a = 10;
+        // let b = 20;
+
+        // if(a < b) {
+        //     console.log("A is lesser than B");
+        // } else if(a > b) {
+        //     console.log("A is greater than B");
+        // } else if(a === b) {
+        //     console.log("A is equal to B");
+        // } else {
+        //     console.log("A is not greater than not lesser than B, nor equal to B");
+        // }
+
+        // if(a < b && a > 0) {
+        //     console.log("A is less than B and also greater than 0");
+        // } else {
+        //     console.log("A is not less than B");
+        // }
+
+        // let color = "red";
+        // if(color == "red") {
+        //     console.log("Color is red");
+        // } else if(color == "green") {
+        //     console.log("Color is green");
+        // } else if(color == "yellow") {
+        //     console.log("Color is yellow");
+        // } else {
+        //     console.log("Color is not defined");
+        // }
+        // switch(color) {
+        //     case "green":
+        //         console.log("Color is green");
+        //         break;
+        //     case "yellow":
+        //         console.log("Color is yellow");
+        //         break;
+        //     case "red":
+        //         console.log("Color is red");
+        //         break;
+        //     default:
+        //         console.log("Color is not defined");
+        // }
+
+        // if(a < b) {
+        //     console.log(" a is less than b");
+        // }
+
+        // let a = 0; // 0
+        // // if(a < 10) {
+        // //     console.log(a);
+        // // }
+
+        // while(a < 10) { // 0<10 1<10 2<10 3<10 4<10 5<10 6<10 7<10 8<10 9<10 10<10
+        //     // console.log(a); // 0123456789
+        //     // // a++; // 12345678910 ; post increment
+        //     // ++a; // 12345678910 ; pre increment
+
+        //     // console.log(a++); // 0123456789
+        //     console.log(++a); // 12345678910
+        // }
+
+        // let arr = [1000, "Dinesh", true, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+        // console.log(arr[0]);
+        // console.log(arr[1]);
+        // console.log(arr[2]);
+
+        // let i = 0;
+        // while(i < arr.length) { // 0<3
+        //     console.log(arr[i]);
+        //     i++;
+        // }
+
+        // a = 1; b = 5;
+        // while (a < 5) { // 1<5 1<5 2<5 3<5 4<5 5<5
+        //     if (b < 5) { // 5<5 4<5 3<5 2<5 1<5
+        //         a++; // 2345
+        //     }
+        //     b--; // 43210
+        //     console.log(a, " = ", b); // 1=4 2=3 3=2 4=1 5=0
+
+        //     // 1 = 5, 2 = 4, 3 = 3, 4 = 2, 5 = 1
+        // }
+
+        // let ageOfPeople = [10, 25, 11, 58, 56, 44, 15, 18, 36];
+        // let i = 0;
+        // while(i < ageOfPeople.length) {
+        //     if(ageOfPeople[i] >= 18) {
+        //         console.log(ageOfPeople[i]);
+        //     }
+        //     i++;
+        // }
+
+        // a = 1; b = 5;
+        // while (a < 5) { // 1<5 6<5
+        //     while (b > 0) { // 5>0 4>0 3>0 2>0 1>0 0>0
+        //         console.log(a, " = " ,b); // 1=5 2=4 3=3 4=2 5=1
+        //         // 1=5, 2=4, 3=3, 4=2, 5=1, 
+        //         a++; // 23456
+        //         b--; // 43210
+        //     }
+        // }
+
+        // let rows = 2;
+        // while(rows > 0) { // 5>0 4>0 3>0
+        //     console.log("r", rows); // 543
+        //     let cols = 3;
+        //     while(cols > 0) { // 5>0 4>0 3>0 2>0 1>0 0>0
+        //         console.log("c", cols); // 54321
+        //         cols--; // 43210
+        //     }
+        //     rows--; // 43
+        // }
+
+        // let a = 1;
+        // while(a > 1) {
+        //     console.log(a);
+        //     a++;
+        // }
+
+        // do {
+        //     console.log(a); // 1
+        //     a++; 2
+        // } while(a < 1); // 2<1
+
+        // let i = 0; // 1
+        // while(i < 10) { // 2
+        //     console.log(i); // 3
+        //     i++; // 4
+        // }
+
+        // for(let i = 0; i < 10; i++) {
+        //     console.log(i);
+        // }
+
+        // let arr = [1000, "Dinesh", true, 1, 2, 3, 4, 5];
+
+        // console.time();
+        // let i = 0;
+        // while(i < arr.length) { // 0<3
+        //     console.log(arr[i]);
+        //     i++;
+        // }
+        // console.timeEnd();
+
+        // console.time();
+        // for(let i = 0; i < arr.length; i++) {
+        //     console.log(arr[i]);
+        // }
+        // console.timeEnd();
+
+        // for (let a = 1; a <= 2; a++) { // 1 ; 1<=2 2<=2 3<=2 ; 23
+        //     for (let b = 1; b <= 2; b++) { // 1 ; 1<=2 2<=2 3<=2 ; 23
+        //         console.log(a , " - " , b); // 1-1, 1-2, 2-1, 2-2
+        //         // 1-1, 1-2, 2-1, 2-2
+        //     }
+        // }
+
+        // for (a = 0, b = 1; a <= 3; b += a, console.log(b), a++); // 1234 | 1234 | 1247
+        //     // 0, 1 ; 0<=3 ; 1+0 = 1 ; 1 ; 1
+        //     //      ; 1<=3 ; 1+1 = 2 ; 2 ; 2
+        //     //      ; 2<=3 ; 2+2 = 4 ; 4 ; 3
+        //     //      ; 3<=3 ; 4+3 = 7 ; 7 ; 4
+        //     //      ; 4<=3
+
+        // for (a = 0, b = 1; a <= 3; a++) {
+        //     b += a; // b = b + a;
+        //     console.log(b);
+        // }
+
+        // let arr = [1000, "Dinesh", true, 1, 2, 3, 4, 5];
+        // console.log("for ... loop");
+        // for(let i = 0; i < arr.length; i++) {
+        //     console.log(arr[i]);
+        // }
+        
+        // console.log("for..in .... loop");
+        // for(let i in arr) {
+        //     console.log(arr[i]);
+        // }
+
+        // console.log("for..of .... loop");
+        // for(let i of arr) {
+        //     console.log(i);
+        // }
+
+        // let obj = {
+        //     id: 1000,
+        //     name: "Dinesh",
+        //     active: true,
+        // }
+        // console.log(obj.id);
+        // console.log(obj.name);
+        // console.log(obj.active);
+        // console.log(obj["id"]);
+        // console.log(obj["name"]);
+        // console.log(obj["active"]);
+        // for(let i in obj) {
+        //     console.log(obj[i]);
+        // }
+
+        let arr = [
+            {
+                id: 1,
+                name: "Dinesh",
+                active: true,
+                subjects: ["HTML", "CSS"],
+                marks: {
+                    "html": 30,
+                    "css": 30,
+                    "boostrap": 30
+                }
+            },
+            {
+                id: 1,
+                name: "Dinesh",
+                active: true,
+                subjects: ["HTML", "CSS"],
+                marks: {
+                    "html": 30,
+                    "css": 30,
+                    "boostrap": 30
+                }
+            },
+        ]
+        id = 1,
+        name = Dinesh
+        active = true
+        subjects = HTML, CSS
+        marks = HTML=30, css = 30, boostrap = 30
+
+    </script>
+    <noscript>JS is disabled in browser.</noscript>
+</body>
+</html>
