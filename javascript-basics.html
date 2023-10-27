@@ -496,19 +496,147 @@
         // addition(2, 2);
         // addition(3, 3);
 
+        // let a = 10;
+        // function generateTable(rows=1, cols=1) {
+        //     console.log(a);
+        //     let b = 20;
+        //     for(let i = 0; i < rows; i++) {
+        //         console.log("r", i);
+        //         for(let j = 0; j < cols; j++) {
+        //             console.log("c", j);
+        //         }
+        //     }
+        // }
+        // generateTable();
+        // generateTable(1, 1);
+        // generateTable(1, 5);
+        // generateTable(5, 6);
 
-        function generateTable(rows=1, cols=1) {
-            for(let i = 0; i < rows; i++) {
-                console.log("r", i);
-                for(let j = 0; j < cols; j++) {
-                    console.log("c", j);
-                }
-            }
+        // function displayName(name) {
+        //     console.log("Welcome, " + name);
+        // }
+        // displayName("Bhaskar");
+        // displayName("Tiffany");
+
+        // console.log("Welcome, Bhaskar");
+        // console.log("Welcome, Tiffany");
+
+        // Traditional Function
+        // function testFunc() {
+        //     console.log("Function!");
+        // }
+        // testFunc();
+        // function testFunc1() {
+        //     return "Function!";
+        // }
+        // function testFunc2(param1, param2) {
+        //     return "Function!" + param1 + param2;
+        // }
+        // function testFunc3(param1=1, param2=1) {
+        //     return "Function!" + param1 + param2;
+        // }
+
+        // // Anonymous Function
+        // let a = 10;
+        // let b = function(i, j) {
+        //     // console.log("Function!" + i + ", " + j);
+        //     return i + j;
+        // }
+        // console.log(a);
+        // console.log(b(10, 20));
+        // console.log(b(20, 30));
+
+        // let obj = {
+        //     id: 1,
+        //     name: "Dinesh",
+        //     active: true,
+        //     subjects: ["Html", "CSS", "JavaScript"],
+        //     marks: {
+        //         "html": 20,
+        //         "css": 30
+        //     },
+        //     getDetails: function() {
+        //         return [this.id, this.name, this.active];
+        //     },
+        //     getAvg: function(n1, n2, n3, n4) {
+        //         return (n1 + n2 + n3 + n4)/4;
+        //     }
+        // }
+        // console.log(obj.id, obj.name, obj.active);
+        // // console.log(obj.getDetails());
+        // let result = obj.getDetails();
+        // for(let i = 0; i < result.length; i++) {
+        //     console.log(result[i] + "||||");
+        // }
+        // console.log(obj.getAvg(1,2,3,4));
+
+        // testFunc3();
+        // function testFunc3(param1=1, param2=1) {
+        //     console.log("Function!" + param1 + param2);
+        // }
+
+        // let b = function(i, j) {
+        //     // console.log("Function!" + i + ", " + j);
+        //     return i + j;
+        // }
+        // console.log(b(10, 10));
+
+        // // Arrow Function
+        // let c = (i, j) => {
+        //     // console.log("Function!" + i + ", " + j);
+        //     return i + j;
+        // }
+        // console.log(c(20, 20));
+
+        // let d = (i, j=1) => i + j;
+        // console.log(d(30, 30));
+
+        // let e = () => console.log("Arrow function!");
+        // e();
+
+        // let f = i => console.log("Arrow function! " + i);
+        // f(10);
+
+        let arr = [1000, "Dinesh", true, 1, 2, 3, 4, 5];
+        console.log("for ... loop");
+        for(let i = 0; i < arr.length; i++) {
+            console.log(arr[i]);
         }
-        generateTable();
-        generateTable(1, 1);
-        generateTable(1, 5);
-        generateTable(5, 6);
+        
+        console.log("for..in .... loop");
+        for(let i in arr) {
+            console.log(arr[i]);
+        }
+
+        console.log("for..of .... loop");
+        for(let i of arr) {
+            console.log(i);
+        }
+
+        console.log("forEach .... method");
+        arr.forEach(processArray);
+        function processArray(v) {
+            console.log(v);
+        }
+
+        console.log("forEach .... method using arrow function");
+        let processArray1 = (v) => {
+            console.log(v);
+        }
+        arr.forEach(processArray1);
+
+        console.log("forEach .... method using arrow function ver2");
+        arr.forEach((v) => {
+            console.log(v);
+        });
+
+        console.log("forEach .... method using arrow function ver3");
+        arr.forEach(v => {
+            console.log(v);
+        });
+
+        console.log("forEach .... method using arrow function ver4");
+        arr.forEach(v => console.log(v));
 
     </script>
     <noscript>JS is disabled in browser.</noscript>
