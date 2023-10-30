@@ -560,11 +560,17 @@
         //     },
         //     getAvg: function(n1, n2, n3, n4) {
         //         return (n1 + n2 + n3 + n4)/4;
+        //     },
+        //     getDetails1: (n1, n2, n3, n4) => {
+        //         return (n1 + n2 + n3 + n4)/4;
         //     }
         // }
         // console.log(obj.id, obj.name, obj.active);
         // // console.log(obj.getDetails());
         // let result = obj.getDetails();
+        // console.log(result);
+        // let result1 = obj.getDetails1(1,2,3,4);
+        // console.log(result1);
         // for(let i = 0; i < result.length; i++) {
         //     console.log(result[i] + "||||");
         // }
@@ -597,46 +603,103 @@
         // let f = i => console.log("Arrow function! " + i);
         // f(10);
 
-        let arr = [1000, "Dinesh", true, 1, 2, 3, 4, 5];
-        console.log("for ... loop");
-        for(let i = 0; i < arr.length; i++) {
-            console.log(arr[i]);
-        }
+        // let arr = [1000, "Dinesh", true, 1, 2, 3, 4, 5];
+        // console.log("for ... loop");
+        // for(let i = 0; i < arr.length; i++) {
+        //     console.log(arr[i]);
+        // }
         
-        console.log("for..in .... loop");
-        for(let i in arr) {
-            console.log(arr[i]);
+        // console.log("for..in .... loop");
+        // for(let i in arr) {
+        //     console.log(arr[i]);
+        // }
+
+        // console.log("for..of .... loop");
+        // for(let i of arr) {
+        //     console.log(i);
+        // }
+
+        // console.log("forEach .... method");
+        // arr.forEach(processArray);
+        // function processArray(v) {
+        //     console.log(v);
+        // }
+
+        // console.log("forEach .... method using arrow function");
+        // let processArray1 = (v) => {
+        //     console.log(v);
+        // }
+        // arr.forEach(processArray1);
+
+        // console.log("forEach .... method using arrow function ver2");
+        // arr.forEach((v) => {
+        //     console.log(v);
+        // });
+
+        // console.log("forEach .... method using arrow function ver3");
+        // arr.forEach(v => {
+        //     console.log(v);
+        // });
+
+        // console.log("forEach .... method using arrow function ver4");
+        // arr.forEach(v => console.log(v));
+
+        // let a = [1, 2, 3, 4, 5, 6];
+        // // let resArr = [];
+        // a.forEach(v => {
+        //     console.log(Math.sqrt(v))
+        //     // resArr.push(Math.sqrt(v));
+        // });
+        // // console.log(resArr);
+
+        // let resMap = a.map(v => Math.sqrt(v));
+        // console.log(resMap);
+
+
+        let ageOfPeople = [10, 25, 11, 58, 56, 44, 15, 18, 36, 22, 5, 8, 16, 18, 36, 22, 5, 8, 16, 18, 36, 22];
+        // console.log("Length: " + ageOfPeople.length);
+        // for(let i = 0 ; i < ageOfPeople.length; i++) {
+        //     if(ageOfPeople[i] >= 18) {
+        //         console.log(ageOfPeople[i]);
+        //     }
+        // }
+
+        // console.log("forEach")
+        // ageOfPeople.forEach(v => {
+        //     if(v >= 18) console.log(v);
+        // });
+
+        // let result = ageOfPeople.filter(v => v < 18);
+        // console.log(result);
+        // console.log(result.length);
+
+        // let sum = 0;
+        // for(let i = 0; i < ageOfPeople.length; i++) {
+        //     sum += ageOfPeople[i];
+        // }
+        // console.log(sum/ageOfPeople.length);
+
+        // let sumNum = ageOfPeople.reduce((iv, v) => iv + v)/ageOfPeople.length;
+        // console.log(sumNum);
+
+        let flag = false;
+        for(let i = 0; i < ageOfPeople.length; i++) {
+            if(ageOfPeople[i] < 18) {
+                flag = true;
+                break;
+            }
+        }
+        if(flag) {
+            console.log("Not all are greater than 18 yrs old");
+        } else {
+            console.log("All are greater than 18 yrs old");
         }
 
-        console.log("for..of .... loop");
-        for(let i of arr) {
-            console.log(i);
-        }
+        let res = ageOfPeople.every(v => v >= 18);
+        console.log(res);
 
-        console.log("forEach .... method");
-        arr.forEach(processArray);
-        function processArray(v) {
-            console.log(v);
-        }
-
-        console.log("forEach .... method using arrow function");
-        let processArray1 = (v) => {
-            console.log(v);
-        }
-        arr.forEach(processArray1);
-
-        console.log("forEach .... method using arrow function ver2");
-        arr.forEach((v) => {
-            console.log(v);
-        });
-
-        console.log("forEach .... method using arrow function ver3");
-        arr.forEach(v => {
-            console.log(v);
-        });
-
-        console.log("forEach .... method using arrow function ver4");
-        arr.forEach(v => console.log(v));
+        let res1 = ageOfPeople.some(v => v >= 18);
+        console.log(res1);
 
     </script>
     <noscript>JS is disabled in browser.</noscript>

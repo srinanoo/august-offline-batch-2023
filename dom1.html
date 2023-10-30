@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Generate Tabular Column</h1>
+    <p>Enter Row Count: <input type="number" id="rows"></p>
+    <p>Enter Col Count: <input type="number" id="cols"></p>
+    <p><button onclick="generateTable();">Generate Table</button></p>
+    <br>
+    <div id="result"></div>
+
+    <script>
+        let arr = [];
+    
+        function generateTable() {
+            let rows = document.getElementById("rows").value;
+            let cols = document.getElementById("cols").value;
+            let table = '<table border="1"><tbody>';
+            for(let i = 0; i < rows; i++) {
+                table += '<tr>';
+                for(let j = 0; j < cols; j++) {
+                    table += '<td>' + j + '</td>';
+                }
+                table += '</tr>';
+            }
+            table += '</tbody></table>';
+            // console.log(table);
+            document.getElementById("result").innerHTML = table;
+        }
+    </script>
+    
+</body>
+</html>

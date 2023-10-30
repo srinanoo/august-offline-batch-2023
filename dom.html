@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <form name="formLogin">
+        <input type="text" id="txtUsername" name="username" placeholder="Username:" class="clsInput"><br>
+        <input type="text" id="paPassword" name="password" placeholder="Password:" class="clsInput"><br>
+        <input type="button" value="Click" onclick="process();">
+    </form> -->
+
+    <div id="div1">
+        Div Container
+    </div>
+    <div id="div2">
+        <strong>Div</strong> Container
+    </div>
+    <p>
+        <input type="text" id="username">
+    </p>
+    <div id="div3"></div>
+    <button onclick="processText();">Click</button>
+
+    <script>
+        function processText() {
+            let div1 = document.getElementById("div1").innerText;
+            // console.log(div1);
+
+            // let div2 = document.getElementById("div2").innerText;
+            // console.log(div2);
+
+            let div2 = document.getElementById("div2").innerHTML;
+            // console.log(div2);
+
+            document.getElementById("username").value = div1;
+
+            // document.getElementById("div3").innerHTML = "This <strong>is a new</strong> content...";
+            document.getElementById("div3").innerHTML = div2;
+        }
+        function process() {
+            console.log("Button is clicked");
+            // Old Methods for Form
+                // 1. document.forms[].<name attribute>.value;
+                let username4 = document.forms[0].username.value;
+                let password4 = document.forms[0].password.value;
+                console.log(username4, password4);
+
+                // 2. document.<name of form>.<name attribute>.value
+                let username5 = document.formLogin.username.value;
+                let password5 = document.formLogin.password.value;
+                console.log(username5, password5);
+
+            // Traditional Methods
+                // 1. document.getElementById("<id attribute's value>").value
+                let username = document.getElementById("txtUsername").value;
+                let password = document.getElementById("paPassword").value;
+                console.log(username, password);
+
+                // 2. document.getElementsByClassName("<class attribute's value>")[].value
+                let username1 = document.getElementsByClassName("clsInput")[0].value;
+                let password1 = document.getElementsByClassName("clsInput")[1].value;
+                console.log(username1, password1);
+
+                // 3. document.getElementsByName("<name attribute's value>")[].value
+                let username2 = document.getElementsByName("username")[0].value;
+                let password2 = document.getElementsByName("password")[0].value;
+                console.log(username2, password2);
+
+                // 4. document.getElementsByTagName("<name of the tag>")[].value
+                let username3 = document.getElementsByTagName("input")[0].value;
+                let password3 = document.getElementsByTagName("input")[1].value;
+                console.log(username3, password3);
+
+            // Modern Methods
+                // 1. document.querySelector("<css selectors>").value - unique or first matched element
+                let username6 = document.querySelector("#txtUsername").value;
+                let password6 = document.querySelector("#paPassword").value;
+                console.log(username6, password6);
+
+                let username7 = document.querySelector(".clsInput").value;
+                let password7 = document.querySelector(".clsInput").value;
+                console.log(username7, password7);
+
+                // 2. document.querySelectorAll("<css selectors>").value - plural matching elements
+                let username8 = document.querySelectorAll("#txtUsername")[0].value
+                let password8 = document.querySelectorAll("#paPassword")[0].value
+                console.log(username8, password8);
+
+                let username9 = document.querySelectorAll(".clsInput")[0].value;
+                let password9 = document.querySelectorAll(".clsInput")[1].value;
+                console.log(username9, password9);
+        }
+    </script>
+    
+</body>
+</html>
