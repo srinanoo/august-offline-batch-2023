@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            width: 200px;
+            height: 100px;
+            border: solid;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <textarea id="message"></textarea>
+    <div id="count"></div> -->
+    
+    <!-- <div id="div1">This is a div container</div>
+    <div id="count"></div> -->
+
+    <!-- Cities:<br>
+    <select id="cities">
+        <option value="1">Chennai</option>
+        <option value="2">Bengaluru</option>
+        <option value="3">Hyderabad</option>
+        <option value="4">Mumbai</option>
+        <option value="5">Trivandrum</option>
+        <option value="6">Kolkata</option>
+    </select>
+
+    <br><br>
+
+    States:<br>
+    <select id="states">
+        <option value="1">Tamilnadu</option>
+        <option value="2">Karnataka</option>
+        <option value="3">Telangana</option>
+        <option value="4">Maharastra</option>
+        <option value="5">Kerala</option>
+        <option value="6">West Bengal</option>
+    </select> -->
+
+    <input type="text"><br>
+    <input type="text"><br>
+    <input type="text" id="txt3"><br>
+    <input type="text"><br>
+    <input type="text"><br>
+
+    <script>
+
+        // CRUD
+            // Create
+            // Read
+            // Update
+            // Delete
+
+        // Dom Events
+            // Keyboard Events
+                // keydown
+                // keypress
+                // keyup
+            // Mouse Events
+                // mouseover
+                // mouseout
+                // mouseenter
+                // mouseleave
+                // mousemove
+                // mousedrag
+
+            // Other Events
+                // change
+                // focus
+                // blur
+
+        // document.querySelector("#message").addEventListener("keyup", (e) => {
+        //     document.querySelector("#count").innerHTML = e.target.value.length+1;
+        // });
+
+        // document.querySelector("#div1").addEventListener("mouseenter", (e) => {
+        //     e.target.style.backgroundColor = "red";
+        // });
+
+        // document.querySelector("#div1").addEventListener("mouseleave", (e) => {
+        //     e.target.removeAttribute("style");
+        // });
+
+        // document.querySelector("#div1").addEventListener("mousemove", (e) => {
+        //     let x = e.clientX;
+        //     let y = e.clientY;
+        //     document.querySelector("#count").innerHTML = "X: "+ x + ", Y: " + y;
+        // });
+
+        // document.querySelector("#cities").addEventListener("change", (e) => {
+        //     document.querySelector("#states").value = e.target.value;
+        // });
+
+        document.querySelector("#txt3").addEventListener("focus", (e) => {
+            if(e.target.value === "") {
+                e.target.style.backgroundColor = "red";
+                e.target.style.color = "white";
+                e.target.focus();
+            } else {
+                e.target.style.backgroundColor = "green";
+                e.target.style.color = "white";
+            }
+        });
+
+        document.querySelector("#txt3").addEventListener("blur", (e) => {
+            if(e.target.value === "") {
+                e.target.style.backgroundColor = "red";
+                e.target.style.color = "white";
+                e.target.focus();
+            } else {
+                e.target.style.backgroundColor = "green";
+                e.target.style.color = "white";
+            }
+        });
+    </script>
+    
+</body>
+</html>

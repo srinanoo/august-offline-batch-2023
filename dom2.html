@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="div1">
+        <h3 id="h3">Heading 3</h3>
+        <p id="p1">Paragraph 1</p>
+        <div id="div2">Div 2</div>
+    </div>
+    <div id="div4"></div>
+
+    <p>
+        <button id="btnClick">Click</button>
+    </p>
+
+    <script>
+        document.getElementById("btnClick").addEventListener("click", () => {
+            let div1 = document.querySelector("#div1");
+            let h3 = document.querySelector("#h3");
+            let p1 = document.querySelector("#p1");
+            let div2 = document.querySelector("#div2");
+
+            let p2 = document.createElement("p");
+            p2.innerHTML = "New Paragraph 2";
+            p2.setAttribute("style", "font-weight: bold; color: red;");
+
+            div1.prepend(p2);
+
+            let btn = document.createElement("button");
+            btn.innerHTML = "New Button";
+            btn.style.backgroundColor = "blue";
+            btn.style.color = "red";
+            btn.title = "New Button Added....";
+            btn.addEventListener("click", () => {
+                document.getElementById("div4").innerHTML = "New Button Clicked";
+            })
+
+            div1.append(btn);
+
+            let div3 = document.createElement("div");
+            div3.innerHTML = "New Div 3 Container";
+
+            div1.insertBefore(div3, p1);
+
+            p1.remove();
+        });
+
+        
+    </script>
+    
+</body>
+</html>

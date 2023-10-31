@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button id="btnSet">Set Storage</button>
+    <button id="btnGet">Get Storage</button>
+    <button id="btnRemove">Remove Storage</button>
+
+    <div id="storage"></div>
+
+    <script>
+        // document.querySelector("#btnSet").addEventListener("click", () => {
+        //     let arr = [
+        //         {
+        //             id: 1,
+        //             name: "Dinesh"
+        //         },
+        //         {
+        //             id: 2,
+        //             name: "Tony"
+        //         }
+        //     ]
+        //     sessionStorage.setItem("name", JSON.stringify(arr));
+        // });
+
+        // document.querySelector("#btnGet").addEventListener("click", () => {
+        //     let data = sessionStorage.getItem("name");
+        //     data = JSON.parse(data);
+        //     console.log(data[0].id);
+        //     // document.querySelector("#storage").innerHTML = 
+        // });
+
+        // document.querySelector("#btnRemove").addEventListener("click", () => {
+        //     sessionStorage.removeItem("name");
+        // });
+
+
+        document.querySelector("#btnSet").addEventListener("click", () => {
+            let arr = [
+                {
+                    id: 1,
+                    name: "Dinesh"
+                },
+                {
+                    id: 2,
+                    name: "Tony"
+                }
+            ]
+            localStorage.setItem("name", JSON.stringify(arr));
+        });
+
+        document.querySelector("#btnGet").addEventListener("click", () => {
+            let data = localStorage.getItem("name");
+            data = JSON.parse(data);
+            console.log(data[0].id);
+            // document.querySelector("#storage").innerHTML = 
+        });
+
+        document.querySelector("#btnRemove").addEventListener("click", () => {
+            localStorage.removeItem("name");
+        });
+    </script>
+    
+</body>
+</html>

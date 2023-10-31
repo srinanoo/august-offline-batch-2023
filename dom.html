@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        .colorRed {
+            color: red;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,7 +19,7 @@
         <input type="button" value="Click" onclick="process();">
     </form> -->
 
-    <div id="div1">
+    <div id="div1" class="colorRed">
         Div Container
     </div>
     <div id="div2">
@@ -23,23 +29,38 @@
         <input type="text" id="username">
     </p>
     <div id="div3"></div>
+    <a href="facebook.com" id="a1">Click</a>
     <button onclick="processText();">Click</button>
 
     <script>
         function processText() {
-            let div1 = document.getElementById("div1").innerText;
+            let div1 = document.getElementById("div1");
             // console.log(div1);
 
             // let div2 = document.getElementById("div2").innerText;
             // console.log(div2);
 
-            let div2 = document.getElementById("div2").innerHTML;
+            let div2 = document.getElementById("div2");
             // console.log(div2);
 
-            document.getElementById("username").value = div1;
+            document.getElementById("username").value = div1.innerText;
 
             // document.getElementById("div3").innerHTML = "This <strong>is a new</strong> content...";
-            document.getElementById("div3").innerHTML = div2;
+            document.getElementById("div3").innerHTML = div2.innerHTML;
+
+            div2.setAttribute("class", "colorRed");
+            div2.setAttribute("style", "background-color: blue; font-weight: bold");
+            div2.setAttribute("title", "This is a new content");
+
+            document.getElementById("div3").style.backgroundColor = "red";
+
+            console.log(document.getElementById("div3"));
+
+            console.log(document.getElementById("a1").getAttribute("href"));
+
+            document.getElementById("a1").href = "https://www.google.com/search";
+
+            div1.removeAttribute("class");
         }
         function process() {
             console.log("Button is clicked");
