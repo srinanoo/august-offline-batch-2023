@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="res"></div>
+
+    <script>
+        try {
+            console.log(b);
+        } catch(err) {
+            // console.log(err.message);
+            console.log("Something went wrong. Please try again!");
+            document.querySelector("#res").innerHTML = "Something went wrong. Please try again!";
+        } finally {
+            b = undefined;
+        }
+    </script>
+    
+</body>
+</html>

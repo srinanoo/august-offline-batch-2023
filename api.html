@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .flex > div {
+            width: 25%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="facts"></div>
+    <button id="btnShowFact">Show Fact</button>
+
+    <div class="flex">
+        <div>
+            <p>Alpha College of Engineering</p>
+            <p>https://alphagroup.edu/engineering/</p>
+        </div>
+        <div>
+            <p>Alpha College of Engineering</p>
+            <p>https://alphagroup.edu/engineering/</p>
+        </div>
+        <div>
+            <p>Alpha College of Engineering</p>
+            <p>https://alphagroup.edu/engineering/</p>
+        </div>
+        <div>
+            <p>Alpha College of Engineering</p>
+            <p>https://alphagroup.edu/engineering/</p>
+        </div>
+        <div>
+            <p>Alpha College of Engineering</p>
+            <p>https://alphagroup.edu/engineering/</p>
+        </div>
+        <div>
+            <p>Alpha College of Engineering</p>
+            <p>https://alphagroup.edu/engineering/</p>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector("#btnShowFact").addEventListener("click", async () => {
+            // fetch("https://catfact.ninja/fact")
+            //     .then((response) => {
+            //         return response.json();
+            //     })
+            //     .then((data) => {
+            //         console.log(data);
+            //         document.querySelector("#facts").innerHTML = "<p>Fact: "+ data.fact + "</p><p>Length: "+ data.length + "</p>";
+            //     });
+
+            let response = await fetch("https://catfact.ninja/fact");
+            let data = await response.json();
+            document.querySelector("#facts").innerHTML = "<p>Fact: "+ data.fact + "</p><p>Length: "+ data.length + "</p>";
+        });
+    </script>
+
+    
+    
+</body>
+</html>

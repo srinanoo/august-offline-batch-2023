@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <a href="http://stackoverflow.com/questions/">Click Here</a>
+
+    <button id="btnClick">Click</button> -->
+
+    <div id="time"></div>
+
+    <div>
+        <button id="btnStart">Start</button>
+        <button id="btnStop">Stop</button>
+    </div>
+
+    <script>
+        // let timer;
+        // document.querySelector("#btnStart").addEventListener("click", () => {
+        //     timer = setInterval(() => {
+        //         let dt = new Date();
+        //         document.querySelector("#time").innerHTML = dt.toLocaleTimeString();
+        //     }, 1000);
+        // });
+
+        // document.querySelector("#btnStop").addEventListener("click", () => {
+        //     clearInterval(timer);
+        // });
+
+        document.querySelector("#btnStart").addEventListener("click", () => {
+            setTimeout(() => {
+                console.log("This is going to be displayed only after 5 secs...")
+            }, 5000);
+        });
+
+        // document.getElementById("btnClick").addEventListener("click", () => {
+        //     // window.alert("This is an alert box");
+        //     // alert("this is also an alert box");
+
+        //     // window.confirm("Are you sure you want to delete?");
+        //     // let conf = confirm("Are you sure you want to delete?");
+        //     // if(conf) {
+        //     //     console.log("We can delete...");
+        //     // }
+
+        //     // window.prompt("Enter your name: ");
+        //     // let name = prompt("Enter your name: ");
+        //     // if(name) {
+        //     //     console.log(name);
+        //     // }
+
+        //     // console.log(window.location);
+        //     // console.log(location.href);
+        //     // console.log(location.host);
+        //     // console.log(location.protocol);
+
+        //     // // location.href = "https://www.google.com";
+        //     // // location.reload();
+        //     // location.replace("https://www.ndtv.com");
+        // });
+    </script>
+    
+</body>
+</html>

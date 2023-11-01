@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #storage {
+            font-weight: bold;
+            color: red;
+            background-color: yellow;
+        }
+    </style>
 </head>
 <body>
 
@@ -14,6 +21,12 @@
     <div id="storage"></div>
 
     <script>
+
+        // TASK
+            // 1. List all existing data (localStorage)
+            // 2. Create new data (localStorage)
+            // 3. After creation, show all existing data (localStorage)
+
         // document.querySelector("#btnSet").addEventListener("click", () => {
         //     let arr = [
         //         {
@@ -41,24 +54,49 @@
 
 
         document.querySelector("#btnSet").addEventListener("click", () => {
-            let arr = [
-                {
-                    id: 1,
-                    name: "Dinesh"
-                },
-                {
-                    id: 2,
-                    name: "Tony"
-                }
-            ]
+            // let arr = [
+            //     {
+            //         id: 1,
+            //         name: "Dinesh"
+            //     },
+            //     {
+            //         id: 2,
+            //         name: "Tony"
+            //     }
+            // ]
+            let arr = [];
+            let id = 1;
+            let name = "Dinesh";
+            let active = true;
+            let obj = {};
+            obj.id = id;
+            obj.name = name;
+            obj.active = active;
+            obj.subjects = ["html", "css", "js"];
+
+            arr.push(obj);
             localStorage.setItem("name", JSON.stringify(arr));
         });
 
         document.querySelector("#btnGet").addEventListener("click", () => {
             let data = localStorage.getItem("name");
             data = JSON.parse(data);
-            console.log(data[0].id);
-            // document.querySelector("#storage").innerHTML = 
+
+            let id = document.getElementById("id").value;
+            let name = document.getElementById("name").value;
+            let active = document.getElementById("active").value;
+            let obj = {};
+            obj.id = id;
+            obj.name = name;
+            obj.active = active;
+            obj.subjects = ["html", "css", "js"];
+
+            data.push(obj);
+
+            localStorage.setItem("name", JSON.stringify(data));
+            
+            console.log(data);
+            document.querySelector("#storage").innerHTML = "Data will go here..."
         });
 
         document.querySelector("#btnRemove").addEventListener("click", () => {
