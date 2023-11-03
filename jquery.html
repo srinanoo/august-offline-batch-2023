@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="div1">Div Container</div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(() => {
+            console.log($("#div1").html());
+            $("#div1").css({"color": "red"});
+        });
+
+        console.log(document.querySelector("#div1").innerHTML);
+        document.querySelector("#div1").style.backgroundColor = "yellow";
+    </script>
+    
+</body>
+</html>

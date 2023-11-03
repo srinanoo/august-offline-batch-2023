@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // function testFunc(n1, n2) {
+        //     return n1+n2;
+        // }
+        // testFunc(1, 2);
+
+        // let obj = {
+        //     id: 1,
+        //     name: "Dinesh",
+        //     active: true,
+        //     getDetails: function() {
+        //         return "This is a getDetails function";
+        //     }
+        // };
+        // console.log(obj.id);
+        // console.log(obj.name);
+        // console.log(obj.active);
+        // obj.id = 2;
+        // console.log(obj.id);
+        // console.log(obj.getDetails());
+
+        // let obj1 = {
+        //     id: 2,
+        //     name: "Tony",
+        //     active: false,
+        // };
+        // console.log(obj1.id);
+        // console.log(obj1.name);
+        // console.log(obj1.active);
+
+        // function testFunc1(i, n, a) { // function constructor
+        //     this.id = i;
+        //     this.name = n;
+        //     this.active = a;
+
+        //     this.getDetails = function() {
+        //         return "This is a function constructor method";
+        //     }
+        // }
+        // // testFunc1(1, 2, 3);
+        // let funcObj = new testFunc1(1, "Dinesh", true); // instance or instantiation
+        // console.log(funcObj.id);
+        // console.log(funcObj.name);
+        // console.log(funcObj.active);
+        // console.log(funcObj.getDetails());
+
+        // let funcObj1 = new testFunc1(2, "Tony", false); //
+        // console.log(funcObj1.id);
+        // console.log(funcObj1.name);
+        // console.log(funcObj1.active);
+
+        // class TestClass {
+        //     constructor(i, n, a) { // this is the first method that will be called automatically when you create the instance of the class...
+        //         this.id = i;
+        //         this.name = n;
+        //         this.active = a;
+        //     }
+
+        //     getDetails() {
+        //         return this.id + ", " + this.name + ", " + this.active;
+        //     }
+
+        //     setDetails(ni, nn, na) {
+        //         this.id = ni;
+        //         this.name = nn;
+        //         this.active = na;
+        //     }
+        // }
+        // let clsObj = new TestClass(1, "Dinesh", true); // instantiation or instance of the class
+        // // console.log(clsObj.id, clsObj.name, clsObj.active);
+        // console.log(clsObj.getDetails());
+        // clsObj.setDetails(2, "Tony", false);
+        // console.log(clsObj.getDetails());
+
+        // class Math {
+        //     max(...args) {
+
+        //     }
+        //     min(...args) {
+
+        //     }
+        //     round() {
+        //         return "round";
+        //     }
+        // }
+
+        class ParentClass {
+            constructor(pid, pname) {
+                this.pid = pid;
+                this.pname = pname;
+            }
+
+            getParentDetails() {
+                return this.pid + ", " + this.pname;
+            }
+        }
+
+        class ChildClass extends ParentClass {
+            constructor(pid, pname, cid, cname, cactive) {
+                super(pid, pname); // put only when you are "extending" from the parent class; automatically will create the instance of the parent class, which will call the constructor of the parent...
+                this.cid = cid;
+                this.cname = cname;
+                this.cactive = cactive;
+            }
+
+            getChildDetails() {
+                return this.getParentDetails() + ", " + this.cid + ", " + this.cname + ", " + this.cactive;
+            }
+        }
+        let clsChild = new ChildClass(1, "Parent", 1, "Child", true);
+        // console.log(clsChild.getParentDetails());
+        console.log(clsChild.getChildDetails());
+    
+    </script>
+    
+</body>
+</html>
