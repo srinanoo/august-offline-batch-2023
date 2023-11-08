@@ -1,5 +1,6 @@
-function HeaderComponent() {
-    let logged = true;
+function HeaderComponent(props) {
+
+    props.name = "Header Name";
 
     let name = "Dinesh - Inside Header Component";
     let num = 10;
@@ -19,34 +20,46 @@ function HeaderComponent() {
 
     let output = menus.map((v, i) => <div key={i}>{v}</div>)
 
+    console.log(props.name);
+    console.log(props.num);
+    console.log(props.num1);
+
     return (
-        <div className="row1">
-            <div className="row1section1">
-                <div>
-                    <img src="images/Dinesh.jpg" alt="" className="logo" />
-                </div>
-                <div>
-                    <p>{logged.toString()}</p>
-                    <h3>{name}</h3>
-                    <h4>{num}</h4>
-                    <div>{details.role}</div>
-                    <div>{details.designation}</div>
-                    <div>{details.email}</div>
-                </div>
-            </div>
-            <div className="row1section2">
-                {
-                    menus.map((menuitem, index) => {
-                        return (
-                            <div key={index}>{menuitem}</div>
-                        )
-                    })
-                }
-            </div>
-            <div>
-                {output}
-            </div>
-        </div>
+        <>
+            {
+                props.logged ?
+                    <div className="row1">
+                        <div className="row1section1">
+                            <div>
+                                <img src="images/Dinesh.jpg" alt="" className="logo" />
+                            </div>
+                            <div>
+                                <p>{props.logged.toString()}</p>
+                                <h3>{name}</h3>
+                                <h4>{num}</h4>
+                                <div>{details.role}</div>
+                                <div>{details.designation}</div>
+                                <div>{details.email}</div>
+                            </div>
+                        </div>
+                        <div className="row1section2">
+                            {
+                                menus.map((menuitem, index) => {
+                                    return (
+                                        <div key={index}>{menuitem}</div>
+                                    )
+                                })
+                            }
+                        </div>
+                        <div>
+                            {output}
+                        </div>
+                    </div>
+                :
+                    <h2>Not Logged In</h2>
+            }
+        </>
+        
     )
 }
 

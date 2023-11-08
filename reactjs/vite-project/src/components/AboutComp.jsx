@@ -1,10 +1,8 @@
-function AboutComponent() {
-    let logged = true;
-
+function AboutComponent(props) {
     return (
         <>
             {
-                logged 
+                props.logged 
                 && 
                 <div className="row3">
                     <h3>About Me</h3>
