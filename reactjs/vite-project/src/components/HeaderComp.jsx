@@ -1,6 +1,8 @@
+import { useState } from "react";
+
 function HeaderComponent(props) {
 
-    props.name = "Header Name";
+    // props.name = "Header Name";
 
     let name = "Dinesh - Inside Header Component";
     let num = 10;
@@ -10,7 +12,8 @@ function HeaderComponent(props) {
         "email": "srinanoo@gmail.com",
     }
 
-    let menus = ["Projects", "Contact", "Blog"];
+    // let menus = ["Projects", "Contact", "Blog"];
+    const [menus, setMenus] = useState(props.menus);
 
     //   let output = [];
     //   menus.forEach((v, i) => {
@@ -20,9 +23,23 @@ function HeaderComponent(props) {
 
     let output = menus.map((v, i) => <div key={i}>{v}</div>)
 
-    console.log(props.name);
-    console.log(props.num);
-    console.log(props.num1);
+    // console.log(props.name);
+    // console.log(props.num);
+    // console.log(props.num1);
+
+    const handleMenuChange = () => {
+        setMenus(["Menu1", "Menu2", "Menu3"])
+    }
+
+    const [user, setUser] = useState({
+        name: "User 1",
+        age: 30,
+        active: true,
+    })
+
+    const handleUserData = () => {
+        setUser((prevData) => ({...prevData, active: false}))
+    }
 
     return (
         <>
@@ -50,9 +67,14 @@ function HeaderComponent(props) {
                                     )
                                 })
                             }
+                            <p><button onClick={handleMenuChange}>Change Menu</button></p>
+                            <p><button onClick={() => setMenus(["1", "2", "3"])}>Change Menu</button></p>
                         </div>
                         <div>
-                            {output}
+                            <p>{user?.name}</p>
+                            <p>{user?.age}</p>
+                            <p>{user?.active.toString()}</p>
+                            <p><button onClick={handleUserData}>Change User Data</button></p>
                         </div>
                     </div>
                 :

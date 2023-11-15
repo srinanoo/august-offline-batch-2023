@@ -1,8 +1,8 @@
 import React from "react";
 
 class ClsHeaderComponent extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.name = "Dinesh - Inside Header Component";
         this.num = 10;
         this.details = {
@@ -24,6 +24,7 @@ class ClsHeaderComponent extends React.Component {
                         <img src="images/Dinesh.jpg" alt="" className="logo" />
                     </div>
                     <div>
+                        <h3>{this.props.name}</h3>
                         <h4>{this.name}</h4>
                         <div>{this.details.role}</div>
                         <div>{this.details.designation}</div>
