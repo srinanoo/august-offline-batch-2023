@@ -31,6 +31,8 @@ function HeaderComponent(props) {
         setMenus(["Menu1", "Menu2", "Menu3"])
     }
 
+    const [subject, setSubject] = useState("ReactJs");
+
     const [user, setUser] = useState({
         name: "User 1",
         age: 30,
@@ -41,8 +43,16 @@ function HeaderComponent(props) {
         setUser((prevData) => ({...prevData, active: false}))
     }
 
+    const handleClick = () => {
+        // setSubject(document.getElementById("subj").value); // impure components (not ReactJs way)
+        localStorage.setItem("subj", subject); // pure components (because it uses ReactJs Hook (useState))
+    }
+
     return (
         <>
+            {subject}
+            <input type="text" onChange={(e) => setSubject(e.target.value)} />
+            <button onClick={handleClick}>Click</button>
             {
                 props.logged ?
                     <div className="row1">
