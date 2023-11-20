@@ -3,6 +3,9 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import ClsHeaderComponent from './components/ClsHeaderComp';
+import FnApiComponent from './components/FnApiComp';
+import FnFormComponent from './components/FnFormComp';
+import FnFormApiComponent from './components/FnFormApiComp';
 
 // import HeaderComponent from './components/HeaderComp';
 // import ProjectsComponent from './components/ProjectsComp';
@@ -144,29 +147,43 @@ import ClsHeaderComponent from './components/ClsHeaderComp';
 //     )
 // }
 
-class App extends React.Component {
-    constructor() {
-        super();
+// class App extends React.Component {
+//     constructor() {
+//         super();
 
-        this.state = {
-            id: 1,
-            name: "Dinesh"
-        }
+//         this.state = {
+//             id: 1,
+//             name: "Dinesh"
+//         }
 
-        this.menus = ["Menu1", "Menu2", "Menu3"];
-    }
+//         this.menus = ["Menu1", "Menu2", "Menu3"];
+//     }
 
-    render() {
-        return (
-            <>
-                <p>{this.state.id}</p>
-                <p>{this.state.name}</p>
-                <p><button onClick={() => this.setState((prev) => ({...prev, id: 2, name: "New Name"}) )}>Change Name</button></p>
+//     render() {
+//         return (
+//             <>
+//                 <p>{this.state.id}</p>
+//                 <p>{this.state.name}
+//                 <span>TEST Data</span></p>
+//                 <p><button onClick={() => this.setState((prev) => ({...prev, id: 2, name: "New Name"}) )}>Change Name</button></p>
 
-                <ClsHeaderComponent menus={this.menus} />
-            </>
-        )
-    }
+//                 <ClsHeaderComponent menus={this.menus} />
+//             </>
+//         )
+//     }
+// }
+
+function App() {
+    return (
+        <>
+            {/* <FnApiComponent /> */}
+            {/* <AnotherFunction /> */}
+
+            {/* <FnFormComponent /> */}
+
+            <FnFormApiComponent />
+        </>
+    )
 }
 
 export default App

@@ -53,3 +53,17 @@ img {
   text-align: center;
   padding: 10px;
 }
+
+p {
+  color: red;
+  &:hover {
+    color: blue;
+    cursor: pointer;
+  }
+  & span {
+    color: green;
+    & a:link {
+      color: wheat;
+    }
+  }
+}

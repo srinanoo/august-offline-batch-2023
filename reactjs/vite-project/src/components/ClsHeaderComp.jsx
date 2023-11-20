@@ -15,7 +15,8 @@ class ClsHeaderComponent extends React.Component {
         this.state = {
             menus: this.props.menus,
             fact: "",
-            name: "Dinesh"
+            name: "Dinesh",
+            data: ""
         }
 
         console.log("constructor called...");
@@ -33,6 +34,8 @@ class ClsHeaderComponent extends React.Component {
 
     componentDidMount() {
         console.log("componentDidMount called...");
+
+        // this.state.data = localStorage.getItem("data");
 
         fetch("https://catfact.ninja/fact")
             .then(res => res.json())
@@ -53,10 +56,10 @@ class ClsHeaderComponent extends React.Component {
         //     })
     }
 
-    shouldComponentUpdate(prevState, nextState) {
-        console.log("Previous state: " + prevState.name);
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log("Previous state: " + this.state.name);
         console.log("Next state: " + nextState.name);
-        if(prevState.name === nextState.name)
+        if(nextState.name === this.state.name)
             return false;
         else
             return true;

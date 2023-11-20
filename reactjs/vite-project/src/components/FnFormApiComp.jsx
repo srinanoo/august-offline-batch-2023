@@ -1,0 +1,50 @@
+import { useEffect, useState } from "react"
+
+export default function FnFormApiComponent() {
+    const [country, setCountry] = useState("India");
+    const [universitiesList, setUniversitiesList] = useState([]);
+
+    const handleUniversities = () => {
+        fetchData();
+    }
+
+    const fetchData = () => {
+        // impure component way...
+        fetch(`http://universities.hipolabs.com/search?country=${country}`)
+        .then(res => res.json())
+        .then(data => {
+            // console.log(data);
+            let temp = [];
+            temp = data.slice(0, 10);
+            // console.log(temp);
+            setUniversitiesList(temp);
+        });
+    }
+
+    useEffect(() => {
+        fetchData();
+    },[]);
+
+    return (
+        <>
+            <h1>Universities List - {country}</h1>
+
+            <p><input type="text" placeholder="Enter Country Name:" onChange={(e) => setCountry(e.target.value)} /></p>
+            <p><button onClick={handleUniversities}>Show List</button></p>
+
+            <div className="flex">
+                {
+                    universitiesList?.map((v, i) => {
+                        return (
+                            <div key={i}>
+                                <p>{v.name}</p>
+                                <p>{v.web_pages[0]}</p>
+                                <hr />
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        </>
+    )
+}
