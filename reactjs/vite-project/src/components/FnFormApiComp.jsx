@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 export default function FnFormApiComponent() {
     const [country, setCountry] = useState("India");
@@ -11,14 +12,23 @@ export default function FnFormApiComponent() {
     const fetchData = () => {
         // impure component way...
         fetch(`http://universities.hipolabs.com/search?country=${country}`)
-        .then(res => res.json())
-        .then(data => {
-            // console.log(data);
-            let temp = [];
-            temp = data.slice(0, 10);
-            // console.log(temp);
-            setUniversitiesList(temp);
-        });
+            .then(res => console.log(res));
+        // .then(data => {
+        //     // console.log(data);
+        //     let temp = [];
+        //     temp = data.slice(0, 10);
+        //     // console.log(temp);
+        //     setUniversitiesList(temp);
+        // });
+
+        // pure component way...
+        axios.get(`http://universities.hipolabs.com/search?country=${country}`)
+            .then(res => {
+                console.log(res);
+                let temp = [];
+                temp = res.data.slice(0, 10);
+                setUniversitiesList(temp);
+            });
     }
 
     useEffect(() => {
