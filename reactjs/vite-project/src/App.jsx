@@ -176,12 +176,12 @@ import FnFormApiComponent from './components/FnFormApiComp';
 function App() {
     return (
         <>
-            {/* <FnApiComponent /> */}
+            <FnApiComponent />
             {/* <AnotherFunction /> */}
 
             {/* <FnFormComponent /> */}
 
-            <FnFormApiComponent />
+            {/* <FnFormApiComponent /> */}
         </>
     )
 }

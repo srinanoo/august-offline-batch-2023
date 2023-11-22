@@ -11,7 +11,7 @@ export default function FnFormApiComponent() {
 
     const fetchData = () => {
         // impure component way...
-        fetch(`http://universities.hipolabs.com/search?country=${country}`)
+        fetch(`//universities.hipolabs.com/search?country=${country}`)
             .then(res => console.log(res));
         // .then(data => {
         //     // console.log(data);

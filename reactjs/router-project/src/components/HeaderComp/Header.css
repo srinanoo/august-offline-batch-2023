@@ -1,0 +1,10 @@
+a {
+    color: white;
+    background-color: red;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+a.active,a:hover {
+    background-color: green;
+}
