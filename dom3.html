@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <input type="text">
+
+    <div>
+
+    </div>
+
+    getElementById - 1 (unique) #div1
+    getElementsByClassName - as a collection
+    getElementsByTagName - as a collection
+    getElementsByName - as a collection
+
+    querySelector - 1 (single) querySelector(".clsInput")
+    querySelectorAll - as a collection -->
+
+    <!-- Events:
+        Mouse
+            mouseover
+            mouseout
+            mouseenter
+            mouseleave
+            mousemove
+            mousedrag
+        Keyboard
+            keydown
+            keypress
+            keyup
+        Other
+            blur
+            focus
+            change
+            load -->
+
+    <!-- <button onclick="button1Click();">Button 1</button> -->
+    <button id="btnClick">Button 2</button>
+
+    <script>
+        // function button1Click() {
+        //     console.log('Button 1 clicked');
+        // }
+
+        document.getElementById("btnClick").addEventListener("click", async () => {
+            // let list = ["a", "b", "c", "d", "e", "f"];
+            // localStorage.setItem("namesList", JSON.stringify(list));
+
+            // let getList = JSON.parse(localStorage.getItem("namesList"));
+            // // console.log(getList[5]);
+            // for(let i = 0; i < getList.length; i++) {
+            //     if(getList[i] === "d")
+            //         console.log(getList[i]);
+            // }
+            
+            // let getFilteredList = getList.filter(v => v !== "d");
+            // console.log(getFilteredList);
+
+            // localStorage.removeItem("namesList");
+
+            // fetch('https://catfact.ninja/fact')
+            //     .then(res => res.json())
+            //     .then(data => {
+            //         console.log(data)
+            //         console.log(data.fact)
+            //     });
+
+            let res = await fetch('https://catfact.ninja/fact');
+            let data = await res.json();
+            console.log(data);
+            console.log(data.fact);
+        });
+    </script>
+    
+</body>
+</html>
